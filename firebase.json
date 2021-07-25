@@ -1,0 +1,26 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "functions": {
+    "source": "functions",
+    "runtime": "nodejs8",
+    "engines": {
+      "node": "8"
+    }
+  },
+  "hosting": {
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
